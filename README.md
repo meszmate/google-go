@@ -26,7 +26,6 @@ func main() {
         "YOUR_CLIENT_SECRET",
         "https://yoursite.com/auth/callback", // must be registered in Google console
         nil, // uses openid + email + profile scopes by default
-        // googleauth.WithHTTPClient(myCustomClient), // optional
     )
 
     http.HandleFunc("/login", loginHandler)

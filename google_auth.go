@@ -47,7 +47,7 @@ func (e UserInfoError) Error() string {
 func (e UserInfoError) Unwrap() error { return e.Err }
 
 // New creates a new GoogleAuth instance with sensible defaults
-func New(clientID, clientSecret, redirectURL string, scopes []string, opts ...Option) *GoogleAuth {
+func NewAuth(clientID, clientSecret, redirectURL string, scopes []string, opts ...Option) *GoogleAuth {
 	if len(scopes) == 0 {
 		scopes = []string{
 			"openid",
